@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h3>ИИ-ассистент для Информационной панели</h3>
+
+    <img src="logo.png" alt="Логотип" class="logo" />
+
+    <label>Выбор LLM-модели</label>
+    <select id="models"></select>
+
+    <label for="viz">Визуализатор</label>
+    <select id="viz"></select>
+
+    <label for="qtemplate">Шаблон запроса</label>
+    <select id="qtemplate">
+      <option value="">-- Выберите --</option>
+      <option value="1">Линейная диаграмма, заголовок "Мой заголовок" по центру, подпись оси X "Ось X", подпись оси Y "Ось Y", легенда снизу.</option>
+      <option value="2">Столбиковая диаграмма, заголовок "Моя столбиковая диаграмма, подпись оси X "Ось X", подпись оси Y "Ось Y".</option>
+      <option value="3">Столбиковая диаграмма, заголовок "Моя столбиковая диаграмма", стек.</option>
+      <option value="4">Комбинированная диаграмма (линии и столбцы), ряды 1-3 выведи линиями, остальные - столбцами. Используй две оси Y - отдельно для линий и столбцов.</option>
+      <option value="5">Лепестковая диаграмма</option>
+
+    </select>
+
+    <label>Запрос</label>
+    <textarea id="prompt" rows="10" placeholder="Введите описание диаграммы, которую вы хотите создать. Наример: Круговая диаграмма, легенда внизу по центру.">Линейная диаграмма</textarea>
+
+    <div class="controls">
+      <button id="send">Выполнить</button>
+<!--      <label class="checkbox">-->
+<!--        <input type="checkbox" id="markdown" /> Markdown-->
+<!--      </label>-->
+    </div>
+
+    <div id="loader" class="loader hidden"></div>
+
+<!--    <label>Ответ</label>-->
+<!--    <div id="response" class="response"></div>-->
+
+<!--    <button id="copy">Скопировать ответ</button>-->
+
+    <div id="status" class="note"></div>
+  </div>
+
+  <script src="libs/marked.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
