@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "ФАП ИИ ассистент",
+  "version": "1.0.0",
+  "description": "ФАП ИИ ассистент (прототип) ДУПР",
+  "permissions": ["clipboardWrite", "activeTab", "scripting", "storage"],
+  "host_permissions": ["http://localhost:1234/*"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
