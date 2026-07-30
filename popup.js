@@ -1,5 +1,4 @@
-//const API_BASE = 'http://localhost:1234/v1';
-const API_BASE = 'http://ra9faf.duckdns.org/v1';
+const API_BASE = 'http://localhost:1234/v1';
 
 const modelsSelect = document.getElementById('models');
 const promptInput = document.getElementById('prompt');
